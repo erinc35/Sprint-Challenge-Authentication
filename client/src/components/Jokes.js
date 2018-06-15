@@ -31,8 +31,7 @@ class Jokes extends React.Component {
                 <div className='row justify-content-sm-center'>
                 {this.state.jokes.map(joke => {
                     return (
-                        // <div key={joke._id}>{joke.setup}</div>
-                        <div key={joke._id} className="col-sm-4 friend-card mt-sm-4">
+                        <div key={joke._id} className="col-sm-4 joke-card mt-sm-4">
                             <div className="image-flip">
                                 <div className="mainflip">
                                     <div className="frontside">
