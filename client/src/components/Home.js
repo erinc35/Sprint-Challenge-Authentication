@@ -29,11 +29,15 @@ class Home extends React.Component {
                 {!localStorage.getItem('token') && (
                     <Link to="/login" > Log In </Link >                
                 )}
-                <h3>Welcome {this.state.username}! Wanna see some jokes?</h3>
-                <Link to="/jokes" > Jokes </Link >                
-                <button onClick={this.signout} className="home-button">
-                    Sign out
-                </button>
+                {localStorage.getItem('token') && (
+                    <h3>Welcome {this.state.username}! Wanna see some jokes?</h3>
+                    )}
+                {localStorage.getItem('token') && (<Link to="/jokes" > Jokes </Link > )}    
+                {localStorage.getItem('token') && (        
+                    <button onClick={this.signout} className="home-button">
+                        Sign out
+                    </button> 
+                )}
             </div >
         );
     }
