@@ -1,5 +1,7 @@
 import React from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+
 
 class Jokes extends React.Component {
     state = {
@@ -21,9 +23,11 @@ class Jokes extends React.Component {
     render() { 
         return ( 
             <div>
-                <button className="home-button">
-                    Home
-                </button>
+                <Link to="/">
+                    <button className="home-button">
+                        Home
+                    </button>
+                </Link>
                 {this.state.jokes.map(joke => <div key={joke._id}>{joke.setup}</div>)}
             </div>
          )
